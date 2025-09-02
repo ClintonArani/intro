@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clinton Omari – Training Application Video</title>
+    <meta name="description" content="A short page hosting Clinton Omari's 3–4 minute training application video." />
+    <meta property="og:title" content="Clinton Omari – Training Application Video" />
+    <meta property="og:description" content="Watch my training application video." />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:video" content="/introduction.mp4" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <style>
+      :root { --bg:#0b1020; --card:#11172a; --text:#eef2ff; --muted:#a5b4fc; --accent:#60a5fa; }
+      * { box-sizing: border-box; }
+      body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; background: linear-gradient(180deg, #0b1020, #0b1020 40%, #0f172a); color: var(--text); }
+      .wrap { min-height: 100svh; display: grid; place-items: center; padding: 32px 16px; }
+      .card { width: 100%; max-width: 880px; background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,.35); padding: 24px; }
+      h1 { margin: 0 0 4px; font-size: clamp(1.25rem, 1.2rem + 1vw, 1.9rem); letter-spacing: .2px; }
+      p { margin: 0; line-height: 1.6; color: #c7d2fe; }
+      .video { margin-top: 18px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
+      video { width: 100%; height: auto; display: block; }
+      .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+      .btn { appearance: none; border: 1px solid rgba(255,255,255,.12); background: transparent; color: var(--text); padding: 10px 14px; border-radius: 12px; cursor: pointer; font-weight: 600; text-decoration: none; }
+      .btn:hover { border-color: rgba(255,255,255,.25); }
+      .meta { margin-top: 12px; font-size: .95rem; color:#9ca3af; }
+      footer { text-align: center; margin-top: 18px; color:#9ca3af; font-size: .9rem; }
+      code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card" aria-labelledby="title">
+        <header>
+          <h1 id="title">Training Application Video</h1>
+          <p>Hi, I’m <strong>Clinton Omari</strong>. Please watch my 3–4 minute introduction video below.</p>
+        </header>
+
+        <div class="video">
+          <!-- Place your video file as /public/introduction.mp4 on Vercel -->
+          <video controls preload="metadata" poster="" aria-label="Clinton Omari training application video">
+            <source src="/introduction.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="/introduction.mp4" target="_blank" rel="noopener">Open video in new tab</a>
+          <a class="btn" href="/introduction.mp4" download>Download video</a>
+        </div>
+
+        <p class="meta">If the video doesn’t load, ensure the file is named <code>introduction.mp4</code> and is placed in the project <code>public/</code> folder.</p>
+
+        <footer>
+          © <span id="y"></span> Clinton Omari
+        </footer>
+      </section>
+    </main>
+    <script>
+      // Small enhancement: update year automatically
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
